@@ -1,0 +1,42 @@
+@import "../utils/colors.scss";
+
+.restaurants{
+    background-color: $color-background;
+    padding: 1em;
+    & img {
+        width: 100%;
+        height: 231px;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }
+    &__layout {
+        background-color: $color-classic;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        &--icon {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            bottom: 2em;
+            font-size: 24px;
+        }
+        &--icon .visible {
+            position: absolute;
+            opacity: 0;
+            transform: translate(0%);
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &--2 {
+            padding: 0 1em;
+            & h3 {
+                margin: 10px 0 3px 0;
+            }
+            & p {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,5 +1,78 @@
 @import "layout/header.scss";
 @import "layout/intro.scss";
+@import "layout/restaurants.scss";
+@import "layout/footer.scss";
 @import "utils/base.scss";
-@import "utils/mixins.scss"
+@import "utils/mixins.scss";
+@import "utils/colors.scss";
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.1em;
+}
+.choice__layout {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+    & button {
+        border-radius: 20px;
+        width: 100%;
+        background-color: $color-background;
+        height: 72.38px;
+        border: none;
+    }
+        &--text {
+            @include choice-text;
+        }
+        & i {
+            margin-right: 2em;
+            &:hover {
+                color: $color-choice;
+            }
+        }  
+}
+
+@media (min-width: 1024px) {
+    .choice {
+        padding: 50px 180px 50px 180px;
+    }
+    .choice__together {
+        display: flex;
+        justify-content: space-between;
+    }
+    .choice__layout--text {
+        position: relative;
+        left: 13px;
+    }
+    .choice__layout {
+        width: 322.49px;
+        & button {
+            padding-right: 5em;
+        }
+    }
+    .restaurants {
+        padding: 1em 180px;
+        &__together {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+    }
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 5em;
+        &__list li {
+            display: flex;
+            flex-direction: row;
+        }
+        &__list--link1 {
+            margin-right: 2em;
+        }
+    }
+}
+
+   
 
