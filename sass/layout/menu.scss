@@ -1,0 +1,77 @@
+@import "../utils/colors.scss";
+
+.menu {
+    background-color: #F6F6F6;
+    border-radius: 50px 50px 0 0;
+    padding: 1em 2em;
+    margin-top: -3em;
+    position: relative;
+    & .visible {
+        position: absolute;
+        opacity: 0;
+        background-color: $color-button;
+        transform: translate(0%);
+    }
+    &__layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: italic;
+        font-size: 28px;
+        font-family: 'shrikhand';
+        & i {
+            font-size: 24px;
+        }
+    }
+    .menu__button {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 4em;
+        &--layout {
+            border-radius: 15.04px;
+            border: 1px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 0 1em;
+            background-color: white;
+        }
+        &--layout .euro {
+            font-weight: bold;
+        }
+        &--last {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3em; 
+            & button { 
+                width: 30%;
+                height: 50px;
+                font-size: 16px;
+                color: white;
+                border: 1px;
+                border-radius: 25px;
+                background: $color-button;
+                box-shadow: $color-gradient;
+            }
+        }
+    }
+}    
+    .menu__together {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        & h3 {
+            margin-bottom: 0;
+        }
+    .menu__title {
+        font-family: 'shrikhand';
+        font-style: italic;
+        font-size: 28px;
+        &--2 {
+            border-bottom: 3px solid #99E2D0;
+            width: 40px;
+            font-weight: 300;
+        }
+    }
+}

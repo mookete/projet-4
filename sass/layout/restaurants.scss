@@ -23,6 +23,7 @@
         &--icon .visible {
             position: absolute;
             opacity: 0;
+            background-color: $color-button;
             transform: translate(0%);
             &:hover {
                 opacity: 1;
@@ -38,5 +39,9 @@
                 margin-bottom: 10px;
             }
         }
+    }
+    .restaurants__link {
+        text-decoration: none;
+        color: black;
     }
 }
