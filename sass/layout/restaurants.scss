@@ -3,6 +3,7 @@
 .restaurants{
     background-color: $color-background;
     padding: 1em;
+    position: relative;
     & img {
         width: 100%;
         height: 231px;
@@ -22,9 +23,11 @@
         }
         &--icon .visible {
             position: absolute;
+            color: transparent;
+            background-image: $color-button;
+            -webkit-background-clip: text;
             opacity: 0;
-            background-color: $color-button;
-            transform: translate(0%);
+            transition: all 1s ease-in-out;
             &:hover {
                 opacity: 1;
             }
@@ -43,5 +46,21 @@
     .restaurants__link {
         text-decoration: none;
         color: black;
+    }
+    .restaurants__new {
+        position: relative;
+        &::before {
+            content: "Nouveau";
+            position: absolute;
+            background-color: #99E2D0;
+            color: #008766;
+            width: 5em;
+            height: 2em;
+            right: 2em;
+            top: 4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }

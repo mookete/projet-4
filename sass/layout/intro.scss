@@ -9,6 +9,9 @@
     background-color: $color-background;
     padding: 2em 0;
     & button {
-       @include button-intro 
+       @include button-intro; 
+       &:hover{
+            opacity: 0.8;
+        }
     }
 }
