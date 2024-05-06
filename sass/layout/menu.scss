@@ -8,9 +8,15 @@
     position: relative;
     & .visible {
         position: absolute;
+        color: transparent;
+        background-image: $color-button;
+        -webkit-background-clip: text;
         opacity: 0;
-        background-color: $color-button;
-        transform: translate(0%);
+        transition: all 2s ease-in-out;
+        transform: translateX(-100%) translateY(31%);
+        &:hover {
+            opacity: 1;
+        }
     }
     &__layout {
         display: flex;
@@ -35,7 +41,7 @@
             align-items: flex-end;
             justify-content: space-between;
             padding: 0 1em;
-            background-color: white;
+            background-color: $color-classic;
         }
         &--layout .euro {
             font-weight: bold;
@@ -48,7 +54,7 @@
                 width: 30%;
                 height: 50px;
                 font-size: 16px;
-                color: white;
+                color: $color-classic;
                 border: 1px;
                 border-radius: 25px;
                 background: $color-button;
@@ -57,21 +63,40 @@
         }
     }
 }    
-    .menu__together {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        & h3 {
-            margin-bottom: 0;
-        }
-    .menu__title {
-        font-family: 'shrikhand';
-        font-style: italic;
-        font-size: 28px;
-        &--2 {
-            border-bottom: 3px solid #99E2D0;
-            width: 40px;
-            font-weight: 300;
-        }
+.menu__together {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & h3 {
+        margin-bottom: 0;
     }
 }
+.menu__title {
+    font-family: 'shrikhand';
+    font-style: italic;
+    font-size: 28px;
+    &--2 {
+        border-bottom: 3px solid #99E2D0;
+        width: 40px;
+        font-weight: 300;
+    }
+}
+.menu__validation {
+    width: 59px;
+    height: 6em;
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0em -1em;
+    & .fa-check {
+        border: 1px solid;
+        border-radius: 90px;
+        background-color: white;
+        color: #99E2D0;
+        padding: 3px;
+    }
+}
+    
+

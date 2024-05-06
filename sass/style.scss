@@ -3,9 +3,11 @@
 @import "layout/restaurants.scss";
 @import "layout/footer.scss";
 @import "layout/menu.scss";
+@import "layout/loader.scss";
 @import "utils/base.scss";
 @import "utils/mixins.scss";
 @import "utils/colors.scss";
+@import "utils/animations.scss";
 
 .choice {
     display: flex;
@@ -37,6 +39,9 @@
 @media (min-width: 1024px) {
     .header__image2 {
         height: 383px;
+    }
+    .intro__text {
+        font-size: 40px;
     }
     .choice {
         padding: 50px 180px 50px 180px;
