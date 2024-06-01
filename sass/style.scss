@@ -12,7 +12,8 @@
 .choice {
     display: flex;
     flex-direction: column;
-    padding: 1em 1.1em;
+    padding: 0 42px 0 63px;
+    margin: 40px 0;
 }
 .choice__layout {
     display: flex;
@@ -29,9 +30,9 @@
             @include choice-text;
         }
         & i {
-            margin-right: 2em;
+            margin-right: 10px;
             &:hover {
-                color: $color-choice;
+                color: $color-purple;
             }
         }  
 }
@@ -57,7 +58,8 @@
     .choice__layout {
         width: 322.49px;
         & button {
-            padding-right: 5em;
+            text-align: start;
+            padding-left: 44px
         }
     }
     .restaurants {
@@ -75,7 +77,16 @@
             display: flex;
             justify-content: center;
             gap: 1em;
-        } 
+        }
+    label {
+        position: relative;
+        top: -55px;
+        left: 20px;
+    }
+    .visible,
+    .invisible {
+        position: absolute;
+    }
     }
     .footer {
         display: flex;

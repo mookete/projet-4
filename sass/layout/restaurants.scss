@@ -3,7 +3,7 @@
 
 .restaurants{
     background-color: $color-background;
-    padding: 1em;
+    padding: 62px 16px;
     position: relative;
     & img {
         width: 100%;
@@ -12,29 +12,12 @@
         object-fit: cover;
     }
     &__layout {
+        position: relative;
         background-color: $color-classic;
         border-radius: 15px;
-        margin-bottom: 1em;
-        &--icon {
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
-            bottom: 2em;
-            font-size: 24px;
-        }
-        &--icon .visible {
-            position: absolute;
-            color: transparent;
-            background-image: $color-button;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 1s ease-in-out;
-            &:hover {
-                opacity: 1;
-            }
-        }
+        margin-bottom: 16px;
         &--2 {
-            padding: 0 1em;
+            padding: 0 16px;
             & h3 {
                 margin: 10px 0 3px 0;
             }
@@ -43,6 +26,30 @@
                 margin-bottom: 10px;
             }
         }
+    }
+    .invisible-checkbox {
+        opacity: 0;
+    }
+    .visible,
+    .invisible {
+        position: absolute;
+        right: 30px;
+        bottom: 46px;
+        font-size: 20px;
+    }
+    .visible {
+        color: transparent;
+        background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        -webkit-background-clip: text;
+        opacity: 0;
+    }
+    input:checked + label .visible {
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+    input:checked + label .invisible {
+        opacity: 0;
+        transition: all 1s ease-in-out;
     }
     .restaurants__link {
         text-decoration: none;

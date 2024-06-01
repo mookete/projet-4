@@ -1,6 +1,6 @@
 .loader {
     position: fixed;
-    background-color: white;
+    background-color: $color-classic;
     opacity: 0.9;
     height: 100vh;
     inset: 0;
@@ -10,7 +10,7 @@
     animation: loader 200ms 3s forwards;
     i {
         animation: spin 3s;
-        color: #9356DC;
-        font-size: 8em;
+        color: $color-purple;
+        font-size: 128px;
     }
 }

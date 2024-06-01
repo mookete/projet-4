@@ -12,21 +12,23 @@
     border-radius: 90%;
     width: 24px;
     height: 24px;
-    background-color: $color-choice;
+    background-color: $color-purple;
     position: absolute;
-    left: 8px;
+    left: 50px;
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @mixin restaurants-new {
     content: "Nouveau";
     position: absolute;
-    background-color: #99E2D0;
+    background-color: $color-green;
     color: #008766;
-    width: 5em;
-    height: 2em;
-    right: 2em;
-    top: 4em;
+    width: 80px;
+    height: 29px;
+    right: 24px;
+    top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;

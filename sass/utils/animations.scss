@@ -13,3 +13,12 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes menu {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
